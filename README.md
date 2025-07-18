@@ -1,6 +1,6 @@
 # SsoApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10.
+This project integrates **OAuth 2.0 Authorization Code Flow with PKCE** using [`angular-oauth2-oidc`](https://github.com/manfredsteyer/angular-oauth2-oidc) for secure Single Sign-On (SSO) capabilities. Built with [Angular CLI](https://github.com/angular/angular-cli) version 19.2.10, the app is designed for modern identity providers like **Azure AD**, **Auth0**, or **Keycloak**.
 
 ## Development server
 
@@ -10,17 +10,17 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/` in your browser. The app will automatically reload when changes to source files are saved.
 
 ## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+To generate a new component, use:
 
 ```bash
 ng generate component component-name
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+For a full list of schematics:
 
 ```bash
 ng generate --help
@@ -28,17 +28,17 @@ ng generate --help
 
 ## Building
 
-To build the project run:
+To build the project:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Build artifacts will be stored in the `dist/` directory. The production build uses Angular’s optimization features for performance.
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+To execute unit tests with [Karma](https://karma-runner.github.io):
 
 ```bash
 ng test
@@ -46,14 +46,23 @@ ng test
 
 ## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+For e2e testing:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Angular CLI doesn’t include an e2e framework by default. You may integrate one like Cypress or Playwright.
+
+## Authentication Features
+
+- 🔐 Secure login/logout using OAuth2
+- 🔍 JWKS-based token validation
+- 📄 Auto-login from discovery document
+- 🛡️ Route protection with token checks
+- 🔄 Configured with Angular's `bootstrapApplication` and standalone providers
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [angular-oauth2-oidc Documentation](https://github.com/manfredsteyer/angular-oauth2-oidc)
+- [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli)
